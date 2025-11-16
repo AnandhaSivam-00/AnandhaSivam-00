@@ -12,8 +12,6 @@
   
 </div>
 
----
-
 ## GitHub Statistics
 
 <div align="center">
@@ -24,8 +22,6 @@
 <div align="center">
   <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AnandhaSivam-00&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=F85D7F&text_color=FFFFFF" alt="Top Languages" height="180" />
 </div>
-
----
 
 ## Tech Stack & Skills
 
@@ -57,8 +53,6 @@
   <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
   <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
 </div>
-
----
 
 ## 📈 Contribution Graph
 
