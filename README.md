@@ -1,6 +1,10 @@
 <div align="center">
-  <img src="https://github.com/AnandhaSivam-00/AnandhaSivam-00/blob/main/v3%20-%20Banner%20Image.png?raw=true" alt="Banner" width="100%" height="50%"/>
+  <img 
+    src="https://github.com/AnandhaSivam-00/AnandhaSivam-00/blob/main/v3%20-%20Banner%20Image.png?raw=true" 
+    alt="Banner" 
+    width="100%" />
 </div>
+
 
 <div align="center">
   
@@ -10,27 +14,22 @@
   
 </div>
 
-## GitHub Statistics
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=AnandhaSivam-00&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=F85D7F&icon_color=F8D866&text_color=FFFFFF" alt="GitHub Stats" height="180" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AnandhaSivam-00&theme=radical&hide_border=true&background=0D1117&stroke=F85D7F&ring=F8D866&fire=F85D7F&currStreakLabel=FFFFFF" alt="GitHub Streak" height="180" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AnandhaSivam-00&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=F85D7F&text_color=FFFFFF" alt="Top Languages" height="180" />
-</div>
 
 ## Tech Stack & Skills
 
 ### Frontend Development
 <div align="left">
-  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
   <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
   <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
   <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
+  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
   <img src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
   <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS" />
+  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
+  <img src="https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
+  <img src="https://img.shields.io/badge/Ant%20Design-0170FE?style=for-the-badge&logo=ant-design&logoColor=white" alt="Ant Design" />
+  
 </div>
 
 ### Backend Development
@@ -48,14 +47,24 @@
   <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
   <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
   <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-  <img src="https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white" alt="Docker" />
-  <img src="https://img.shields.io/badge/AWS-%23FF9900.svg?style=for-the-badge&logo=amazon-aws&logoColor=white" alt="AWS" />
 </div>
+
+## GitHub Statistics
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=AnandhaSivam-00&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=6c7db4&icon_color=F8D866&text_color=6c7db4" alt="GitHub Stats" height="180" />
+  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AnandhaSivam-00&theme=radical&hide_border=true&background=0D1117&stroke=6c7db4&ring=6c7db4&fire=F85D7F&currStreakLabel=6c7db4" alt="GitHub Streak" height="180" />
+</div>
+
+<div align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AnandhaSivam-00&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=6c7db4&text_color=FFFFFF" alt="Top Languages" height="180" />
+</div>
+
 
 ## Contribution Graph
 
 <div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=AnandhaSivam-00&theme=react-dark&hide_border=true&area=true&bg_color=0D1117&color=F85D7F&line=F8D866&point=FFFFFF" alt="Contribution Graph" />
+  <img src="https://github-readme-activity-graph.vercel.app/graph?username=AnandhaSivam-00&theme=react-dark&hide_border=true&area=true&bg_color=0D1117&color=6c7db4&line=8986b2&point=FFFFFF" alt="Contribution Graph" />
 </div>
 
 ## Profile Views
@@ -68,6 +77,6 @@
 
 ---
 <div align="center">
-  <img src="https://github.com/AnandhaSivam-00/AnandhaSivam-00/blob/main/v3%20-%20Banner%20Image.png?raw=true" alt="Banner" width="100%" height="50%"/>
+  <img src="https://github.com/AnandhaSivam-00/AnandhaSivam-00/blob/main/v2%20-%20banner-bottom%20images.png?raw=true" alt="Banner" width="100%" height="50%"/>
 </div>
 
