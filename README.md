@@ -1,7 +1,5 @@
-# Hi, I'm Anandhasivam Sambathkumar 👋
-
 <div align="center">
-  <img src="https://via.placeholder.com/1200x300/1a1b27/ffffff?text=Developer+%7C+Coding+%7C+Innovation" alt="Banner" width="100%" />
+  <img src="https://github.com/AnandhaSivam-00/AnandhaSivam-00/blob/main/v3%20-%20Banner%20Image.png?raw=true" alt="Banner" width="100%" height="50%"/>
 </div>
 
 <div align="center">
