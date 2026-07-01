@@ -14,66 +14,69 @@
   
 </div>
 
+## 👋 Yo, Internet Explorer... (jk, I use better browsers) 😂
 
-## Tech Stack & Skills
+I'm **Anand** - your friendly neighborhood **Full-Stack Developer** with the brain of a curious cartoon character who accidentally wandered into the real world.
 
-### Frontend Development
-<div align="left">
-  <img src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
-  <img src="https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E" alt="JavaScript" />
-  <img src="https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white" alt="HTML5" />
-  <img src="https://img.shields.io/badge/css3-%231572B6.svg?style=for-the-badge&logo=css3&logoColor=white" alt="CSS3" />
-  <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="React" />
-  <img src="https://img.shields.io/badge/redux-%23593d88.svg?style=for-the-badge&logo=redux&logoColor=white" alt="Redux" />
-  <img src="https://img.shields.io/badge/tailwindcss-%2338B2AC.svg?style=for-the-badge&logo=tailwind-css&logoColor=white" alt="TailwindCSS" />
-  <img src="https://img.shields.io/badge/Bootstrap-7952B3?style=for-the-badge&logo=bootstrap&logoColor=white" alt="Bootstrap" />
-  <img src="https://img.shields.io/badge/Framer%20Motion-0055FF?style=for-the-badge&logo=framer&logoColor=white" alt="Framer Motion" />
-  <img src="https://img.shields.io/badge/Ant%20Design-0170FE?style=for-the-badge&logo=ant-design&logoColor=white" alt="Ant Design" />
+By day, I build apps that (mostly) work.  
+By night, I transform into a professional animation binger, fantasy world explorer, and thriller movie detective who still screams at jump scares.
+
+Think of me as:
+- **Thor** but instead of a hammer, I wield Next.js + Node.js
+- **Buzz Lightyear** but instead of "To infinity and beyond", I say "To production and beyond!"
+A curious raccoon that learned to code and now can't stop breaking things... then fixing them while laughing
+
+Always in funny mode. Always learning something new.  
+If my code ever scares you, just remember: it's probably a feature, not a bug. Or a plot twist. Same thing.
+
+**Currently accepting quests, memes, and wild collaboration ideas** 🛡️✨
+
+<details>
+  <summary><h2>Tech Stack & Skills</h2></summary>
   
-</div>
+  ### Programming Languages
+  [![My Skills](https://skillicons.dev/icons?i=java,js,typescript,py&perline=8)](https://skillicons.dev)
+  
+  ### Frontend Development
+  [![My Skills](https://skillicons.dev/icons?i=nextjs,react,redux,tailwind,bootstrap,html,css,figma&perline=8)](https://skillicons.dev)
+  
+  ### Backend Development
+  [![My Skills](https://skillicons.dev/icons?i=nodejs,express,nginx&perline=8)](https://skillicons.dev)
+  
+  ### Database & Tools
+  [![My Skills](https://skillicons.dev/icons?i=mongodb,firebase,postgres,supabase,redis,prisma&perline=8)](https://skillicons.dev)
+  
+  ### Deployment & CI/CD Tools
+  [![My Skills](https://skillicons.dev/icons?i=git,github,githubactions,docker,cloudflare,vercel&perline=8)](https://skillicons.dev)
+</details>
 
-### Backend Development
-<div align="left">
-  <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="NodeJS" />
-  <img src="https://img.shields.io/badge/express.js-%23404d59.svg?style=for-the-badge&logo=express&logoColor=%2361DAFB" alt="Express.js" />
-  <img src="https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white" alt="Java" />
-  <img src="https://img.shields.io/badge/spring-%236DB33F.svg?style=for-the-badge&logo=spring&logoColor=white" alt="Spring" />
-  <img src="https://img.shields.io/badge/spring%20boot-%236DB33F.svg?style=for-the-badge&logo=spring-boot&logoColor=white" alt="Spring Boot" />
-</div>
+<details>
+  <summary><h2>GitHub Stats</h2></summary>
+  
+  <div align="center">
+    <img src="https://github-readme-stats.vercel.app/api?username=AnandhaSivam-00&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=6c7db4&icon_color=F8D866&text_color=6c7db4" alt="GitHub Stats" height="180" />
+    <img src="https://github-readme-streak-stats.herokuapp.com/?user=AnandhaSivam-00&theme=radical&hide_border=true&background=0D1117&stroke=6c7db4&ring=6c7db4&fire=F85D7F&currStreakLabel=6c7db4" alt="GitHub Streak" height="180" />
+  </div>
+  
+  <div align="center">
+    <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AnandhaSivam-00&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=6c7db4&text_color=FFFFFF" alt="Top Languages" height="180" />
+  </div>
+</details>
 
-### Database & Tools
-<div align="left">
-  <img src="https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
-  <img src="https://img.shields.io/badge/mysql-%2300f.svg?style=for-the-badge&logo=mysql&logoColor=white" alt="MySQL" />
-  <img src="https://img.shields.io/badge/postgres-%23316192.svg?style=for-the-badge&logo=postgresql&logoColor=white" alt="PostgreSQL" />
-  <img src="https://img.shields.io/badge/git-%23F05033.svg?style=for-the-badge&logo=git&logoColor=white" alt="Git" />
-</div>
+<details>
+  <summary><h2>Contribution Graph</h2></summary>
+  <div align="center">
+    <img src="https://github-readme-activity-graph.vercel.app/graph?username=AnandhaSivam-00&theme=react-dark&hide_border=true&area=true&bg_color=0D1117&color=6c7db4&line=8986b2&point=FFFFFF" alt="Contribution Graph" />
+  </div>
+</details>
 
-## GitHub Statistics
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=AnandhaSivam-00&show_icons=true&theme=radical&hide_border=true&bg_color=0D1117&title_color=6c7db4&icon_color=F8D866&text_color=6c7db4" alt="GitHub Stats" height="180" />
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=AnandhaSivam-00&theme=radical&hide_border=true&background=0D1117&stroke=6c7db4&ring=6c7db4&fire=F85D7F&currStreakLabel=6c7db4" alt="GitHub Streak" height="180" />
-</div>
-
-<div align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=AnandhaSivam-00&layout=compact&theme=radical&hide_border=true&bg_color=0D1117&title_color=6c7db4&text_color=FFFFFF" alt="Top Languages" height="180" />
-</div>
-
-
-## Contribution Graph
-
-<div align="center">
-  <img src="https://github-readme-activity-graph.vercel.app/graph?username=AnandhaSivam-00&theme=react-dark&hide_border=true&area=true&bg_color=0D1117&color=6c7db4&line=8986b2&point=FFFFFF" alt="Contribution Graph" />
-</div>
-
-## Profile Views
-
+### Profile Views
 <div align="center">
   
   ![Visitors](https://api.visitorbadge.io/api/visitors?path=https%3A%2F%2Fgithub.com%2FAnandhaSivam-00&label=Profile%20Views&countColor=%23F85D7F&style=for-the-badge&labelStyle=upper)
   
 </div>
+
 
 ---
 <div align="center">
