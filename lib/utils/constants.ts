@@ -1,3 +1,8 @@
+import { config } from 'dotenv';
+
+// load .env before reading process.env, so local values win over Windows' built-in USERNAME variable
+config({ override: true });
+
 // Fine-grained personal access token with All Repositories access:
 // Account permissions: read:Followers, read:Starring, read:Watching
 // Repository permissions: read:Commit statuses, read:Contents, read:Issues, read:Metadata, read:Pull Requests

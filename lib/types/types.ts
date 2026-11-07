@@ -11,7 +11,6 @@ export interface RepoListItem {
   full_name: string;
   owner: { login: string };
   stargazers_count: number;
-  pushed_at: string | null;
 }
 
 /** Weekly commit hash from GET /repos/{owner}/{repo}/stats/contributors (w: week, a: additions, d: deletions, c: commits) */

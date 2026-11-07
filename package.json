@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "typecheck": "tsc --noEmit",
-    "run": "tsx today.ts",
+    "run": "tsx index.ts",
     "lint": "eslint"
   },
   "keywords": [

@@ -7,6 +7,7 @@
  *
  * Root Repo Link: https://github.com/Andrew6rant/Andrew6rant/
  */
+
 import { createHash } from 'node:crypto';
 import { existsSync, mkdirSync, readFileSync, writeFileSync } from 'node:fs';
 import { performance } from 'node:perf_hooks';
@@ -14,7 +15,7 @@ import { pathToFileURL } from 'node:url';
 import type { Element } from '@xmldom/xmldom';
 import { DOMParser, XMLSerializer } from '@xmldom/xmldom';
 
-import { fetchAllRepos, fetchContributorStats, fetchUserData, REST_CALL_COUNT } from './data/githubFetch.js';
+import { fetchAllRepos, fetchCommitCount, fetchContributorStats, fetchUserData, REST_CALL_COUNT } from './data/githubFetch.js';
 import { HEADERS, USER_NAME } from './lib/utils/constants.js';
 import { dailyReadme, comma } from './lib/utils/helpers.js';
 import type { RepoListItem } from './lib/types/types.js';
@@ -71,8 +72,19 @@ async function graphCommits(startDate: string, endDate: string): Promise<number>
   return parseInt(json['data']['user']['contributionsCollection']['contributionCalendar']['totalContributions'], 10);
 }
 
+/** The default comment block written to a new cache file: a legend for the five columns */
+const CACHE_LEGEND: string[] = [
+  'This is a cache of all of the repositories I own, have contributed to, or am a member of.',
+  '',
+  'repository (hashed)  total commits  my commits  LOC added by me  LOC deleted by me',
+  '         \\                \\                \\           \\_____________  \\',
+  '          \\                \\                \\______________________  \\  \\',
+  '           \\                \\___________________________________   \\  \\  \\',
+  '____________\\___________________________________________________\\___\\__\\__\\_______',
+];
+
 /**
- * Checks each repository in repos to see if it has been pushed to since the last time it was cached
+ * Checks each repository in repos to see if its default-branch commit count has changed since the last cache
  * If it has, run fetchContributorStats on that repository to update the LOC count
  * 
  * @param repos - The list of repositories to check
@@ -95,10 +107,8 @@ async function cacheBuilder(
 
   if(!existsSync(filename)) { // If the cache file doesn't exist, create it
     data = [];
-    if(commentSize > 0) {
-      for(let i = 0; i < commentSize; i++) {
-        data.push('This line is a comment block. Write whatever you want here.\n');
-      }
+    for(let i = 0; i < commentSize; i++) {
+      data.push((CACHE_LEGEND[i] ?? 'This line is a comment block. Write whatever you want here.') + '\n');
     }
     mkdirSync('cache', { recursive: true });
     writeFileSync(filename, data.join(''));
@@ -118,20 +128,21 @@ async function cacheBuilder(
   try {
     for(let index = 0; index < repos.length; index++) {
       const repo = repos[index];
-      const pushedAt = repo.pushed_at ?? 'none'; // repositories with no pushes store a stable placeholder
-      const [repoHash, cachedPush] = data[index].trim().split(/\s+/);
+      const [repoHash, cachedCount] = data[index].trim().split(/\s+/);
 
       if(repoHash === createHash('sha256').update(repo.full_name, 'utf-8').digest('hex')) {
-        if(cachedPush !== pushedAt) { // if the repo has been pushed to, update loc for that repo
-          const [owner, repoName] = repo.full_name.split('/');
+        const [owner, repoName] = repo.full_name.split('/');
+        const totalCount = await fetchCommitCount(owner, repoName);
+
+        if(cachedCount !== String(totalCount)) { // if the commit count has changed, update loc for that repo
           const stats = await fetchContributorStats(owner, repoName, OWNER_ID);
           if(stats === null) { // empty repository or the user has no commits on the default branch
-            data[index] = `${repoHash} ${pushedAt} 0 0 0\n`;
+            data[index] = `${repoHash} ${totalCount} 0 0 0\n`;
           } 
           else {
             const weekAdd = stats.weeks.reduce((sum, week) => sum + week.a, 0);
             const weekDel = stats.weeks.reduce((sum, week) => sum + week.d, 0);
-            data[index] = `${repoHash} ${pushedAt} ${stats.total} ${weekAdd} ${weekDel}\n`;
+            data[index] = `${repoHash} ${totalCount} ${stats.total} ${weekAdd} ${weekDel}\n`;
           }
         }
       }
@@ -448,7 +459,8 @@ const main = async (): Promise<void> => {
   const followerData = userData.followers;
 
   // several repositories that I've contributed to have since been deleted.
-  if(OWNER_ID === 95125093) {
+  // the archive file only ships with Andrew6rant's repo, so skip the block when it is absent
+  if(OWNER_ID === 95125093 && existsSync('cache/repository_archive.txt')) {
     const archivedData = addArchive();
     for(let index = 0; index < totalLoc.length - 1; index++) {
       totalLoc[index] = (totalLoc[index] as number) + archivedData[index];
