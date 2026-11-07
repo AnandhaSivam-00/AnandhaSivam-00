@@ -1,0 +1,32 @@
+{
+  "name": "github-readme",
+  "version": "1.0.0",
+  "description": "This project uses GitHub's REST API to update dark_mode.svg / light_mode.svg with age, commits, stars, repositories, followers, and lines of code stats.",
+  "main": "index.js",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "run": "tsx today.ts",
+    "lint": "eslint"
+  },
+  "keywords": ["github-readme", "github", "readme", "stats", "svg", "terminal-theme", "ascii-art", "github-restapi"],
+  "author": "Anandhasivam Sambathkumar",
+  "license": "ISC",
+  "devEngines": {
+    "packageManager": {
+      "name": "pnpm",
+      "version": "12.11.2",
+      "onFail": "download"
+    }
+  },
+  "packageManager": "pnpm@12.11.2",
+  "type": "module",
+  "dependencies": {
+    "@xmldom/xmldom": "^0.9.12",
+    "date-fns": "^4.4.0"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}
