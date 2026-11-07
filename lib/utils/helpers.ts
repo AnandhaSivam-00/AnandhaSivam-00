@@ -4,8 +4,8 @@ import { addMonths, differenceInCalendarDays, differenceInCalendarMonths } from 
  * Returns the length of time since I was born
  * e.g. 'XX years, XX months, XX days'
  * 
- * @param {Date} birthday - The date of my birthday
- * @returns {string} - The length of time since I was born
+ * @param birthday - The date of my birthday
+ * @returns The length of time since I was born
  */
 export function dailyReadme(birthday: Date): string {
     const diff = relativedelta(new Date(), birthday);
@@ -23,8 +23,8 @@ export function dailyReadme(birthday: Date): string {
  * 'day' + format_plural(diff.days) == 1
  * >>> '1 day'
  * 
- * @param {number} unit - The number to format
- * @returns {string} - The properly formatted number
+ * @param unit - The number to format
+ * @returns - The properly formatted number
  */
 export function formatPlural(unit: number): string {
     return unit !== 1 ? 's' : '';
@@ -36,9 +36,9 @@ export function formatPlural(unit: number): string {
  * addMonths clamps overflowing days (e.g. Feb 29 -> Feb 28) and preserves the
  * base date's time-of-day, matching dateutil's calendar behavior.
  * 
- * @param {Date} to - The date to compare to
- * @param {Date} from - The date to compare from
- * @returns {{ years: number; months: number; days: number }} - The difference between the two dates in years, months, and days
+ * @param to - The date to compare to
+ * @param from - The date to compare from
+ * @returns The difference between the two dates in years, months, and days
  */
 export function relativedelta(to: Date, from: Date): { years: number; months: number; days: number } {
     const timeOfDay = (d: Date): number =>
