@@ -1,0 +1,47 @@
+name: README build
+
+on:
+  push:
+    branches:
+      - main
+  schedule:
+    - cron: "0 4 * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1   #v7.0.1
+        with:
+          fetch-depth: 1
+          persist-credentials: true
+
+      - name: Install and setup pnpm with node runtime
+        uses: pnpm/setup@73e46992e05b19abd31f2f3c20e0e7370d762115   #v6.1.1
+        with:
+          version: 12.11.2
+          runtime: node@24
+          cache: true
+          install: false
+          cache-dependency-path: pnpm-lock.yaml
+
+      - name: Install dependencies
+        shell: bash
+        run: pnpm install --frozen-lockfile
+
+      - name: Update README file
+        env:
+          PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
+          USERNAME: ${{ secrets.USERNAME }}
+        run: pnpm run
+
+      - name: Commit
+        run: |-
+          git add .
+          git diff
+          git config --global user.email "github-actions-bot@anandhasivam-00.github.io"
+          git config --global user.name "AnandhaSivam-00/GitHub-Actions-Bot"
+          git commit -m "Updated README" -a || echo "No changes to commit"
+          git push
