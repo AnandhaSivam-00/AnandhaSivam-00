@@ -2,7 +2,7 @@
 
 ## Project overview
 
-This project is to Uses GitHub's GraphQL v4 API to update dark_mode.svg / light_mode.svg with age, commits, stars, repositories, followers, and lines of code stats.
+This project uses GitHub's REST API to update dark_mode.svg / light_mode.svg with age, commits, stars, repositories, followers, and lines of code stats.
 
 ## Tech Stacks & Deployments
 
