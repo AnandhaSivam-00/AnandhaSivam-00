@@ -35,7 +35,7 @@ jobs:
         env:
           PAT_TOKEN: ${{ secrets.PAT_TOKEN }}
           USERNAME: ${{ secrets.USERNAME }}
-        run: pnpm run
+        run: pnpm run run
 
       - name: Commit
         run: |-

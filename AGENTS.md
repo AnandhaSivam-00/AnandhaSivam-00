@@ -17,7 +17,7 @@ This project uses GitHub's REST API to update dark_mode.svg / light_mode.svg wit
 
 ```bash
 # Run the project
-pnpm run
+pnpm run run
 
 # Typechecking the codebase
 pnpm typecheck
