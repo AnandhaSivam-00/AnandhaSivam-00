@@ -24,8 +24,8 @@ jobs:
           version: 12.11.2
           runtime: node@24
           cache: true
-          install: false
-          cache-dependency-path: pnpm-lock.yaml
+          run_install: false
+          cache_dependency_path: pnpm-lock.yaml
 
       - name: Install dependencies
         shell: bash
