@@ -16,37 +16,36 @@ size-adjust: 109%;
 text, tspan {white-space: pre;}
 </style>
 <rect width="985px" height="530px" fill="#f6f8fa" rx="15"/>
-<text x="15" y="30" fill="#24292f" class="ascii">
-<tspan x="15" y="30">            ;;,, ,;,|g;~,,                      </tspan>
-<tspan x="15" y="50">         ,g@@@@@@l&amp;$$$@|,w$$@gy,            </tspan>
-<tspan x="15" y="70">        $@@@@@@@@@@$@@@@@@@@$$MW$k              </tspan>
-<tspan x="15" y="90">       $$@@@@@@B@@@@@@@@@@@@@$@$$g,$            </tspan>
-<tspan x="15" y="110">     g@llM**'''||%@@@@@$@@$@@@@@@@L$&amp;      </tspan>
-<tspan x="15" y="130">   @$&amp;$F         ''T%M$@@@@@@@@@@@$@$@     </tspan>
-<tspan x="15" y="150">  @@@@F              ']@@@@@@$$@$@@@@          </tspan>
-<tspan x="15" y="170">  @@@$L               |$@@@$$l$@@@@$F          </tspan>
-<tspan x="15" y="190"> ]@@@@L ,@@$@@@@L  ,l@$$$$$$$$$@@@@@           </tspan>
-<tspan x="15" y="210">  %$@@@$}',,gg@||@@@@l@g@ggg|l$&amp;$@@$       </tspan>
-<tspan x="15" y="230">  ]@@@@@'"*TTTTT'F  ]Wl|||''"'$]@@@@ </tspan>
-<tspan x="15" y="250">   $$@M$       ,#    ]gg,,,,,.r'$@$            </tspan>
-<tspan x="15" y="270">    &amp;$L        ' ,, ,,,'T''`    $$L        </tspan>
-<tspan x="15" y="290">     lL         T"||||!   `-    l"'  </tspan>
-<tspan x="15" y="310">     ' |        '||l||||"|L|  L `         </tspan>
-<tspan x="15" y="330">      ''   '|L++=*****""*"||` L|</tspan>
-<tspan x="15" y="350">        |           ,,      |||F               </tspan>
-<tspan x="15" y="370">        '         |||||||| ||l$                </tspan>
-<tspan x="15" y="390">          !                |l&amp;L            </tspan>
-<tspan x="15" y="410">           '!,       |||,||@M|L                </tspan>
-<tspan x="15" y="430">            ||l&amp;$@$$@$$$@$MT|||            </tspan>
-<tspan x="15" y="450">         |    |||lll$$llll|||||L               </tspan>
-<tspan x="15" y="470">    ,;y@        ||||||l||@|||||l               </tspan>
-<tspan x="15" y="490">,g$@$$$@         |||||||||||||||| $g,          </tspan>
-<tspan x="15" y="510">$$$$$$$$@    |    |||||||||||||| |$$@g         </tspan>
+<text x="15" y="30" fill="#24292f" class="ascii" xml:space="preserve">
+<tspan x="15" y="30">                 ==</tspan>
+<tspan x="15" y="50">               :x#8=.</tspan>
+<tspan x="15" y="70">              -0S#@8@:</tspan>
+<tspan x="15" y="90">             ;08#8@8@@-</tspan>
+<tspan x="15" y="110">            .x8@0S08#8x </tspan>
+<tspan x="15" y="130">          =:. =S08@SSx :-X </tspan>
+<tspan x="15" y="150">        :X+=X. :@##@; :==Xx:</tspan>
+<tspan x="15" y="170">       ;X++X=X- -@@- ;=xx=xx;</tspan>
+<tspan x="15" y="190">      :=X==xX++- .. ;XXxx=+X+;</tspan>
+<tspan x="15" y="200"></tspan>
+<tspan x="15" y="220">    :XXXxxX++=x:    .=xx+xxxxx=:</tspan>
+<tspan x="15" y="240">   .=XXXX+x=+=:      :xXxx=X+xxX.</tspan>
+<tspan x="15" y="260">  :==xXXx++xX:        .=+xXX=++XX.</tspan>
+<tspan x="15" y="280"> ;X++xXX=+Xx:          :X=X=X=X==X:</tspan>
+<tspan x="15" y="300">-XXX+=+===;              :XX+X=XxX=:</tspan>
+<tspan x="15" y="340">                 ;X</tspan>
+<tspan x="15" y="360">                 @:</tspan>
+<tspan x="15" y="380">                 8+</tspan>
+<tspan x="15" y="400">                 .x</tspan>
+<tspan x="15" y="420">                 :@</tspan>
+<tspan x="15" y="440">                 -.</tspan>
+<tspan x="15" y="460">                 =8</tspan>
+<tspan x="15" y="480">                 ;#</tspan>
+<tspan x="15" y="500">                 x0</tspan>
 </text>
 <text x="390" y="30" fill="#24292f">
 <tspan x="390" y="30">AnandhaSivam-00</tspan> -————————————————————————————————————————-—-
 <tspan x="390" y="50" class="cc">. </tspan><tspan class="key">OS</tspan>:<tspan class="cc"> ........................ </tspan><tspan class="value">Windows 11, Android 14, Linux</tspan>
-<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ...................... </tspan><tspan class="value" id="age_data">22 years, 5 months, 29 days</tspan>
+<tspan x="390" y="70" class="cc">. </tspan><tspan class="key">Uptime</tspan>:<tspan class="cc" id="age_data_dots"> ...................... </tspan><tspan class="value" id="age_data">23 years, 0 months, 11 days</tspan>
 <tspan x="390" y="90" class="cc">. </tspan><tspan class="key">Host</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="value">anandhasivam.indevs.in</tspan>
 <tspan x="390" y="110" class="cc">. </tspan><tspan class="key">Kernel</tspan>:<tspan class="cc"> ............................. </tspan><tspan class="value">Full-Stack Developer</tspan>
 <tspan x="390" y="130" class="cc">. </tspan><tspan class="key">IDE</tspan>:<tspan class="cc"> ....................... </tspan><tspan class="value">VSCode 1.141.0, Cursor 3.27.0</tspan>

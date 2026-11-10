@@ -255,12 +255,13 @@ function svgOverwrite(
   // mimic lxml's etree.parse(filename) + etree.write(filename, encoding='utf-8', xml_declaration=True)
   const doc = new DOMParser().parseFromString(readFileSync(filename, 'utf-8'), 'text/xml');
   const root = doc.documentElement!;
-  justifyFormat(root, 'commit_data', commitData, 22);
-  justifyFormat(root, 'star_data', starData, 14);
-  justifyFormat(root, 'repo_data', repoData, 6);
+  justifyFormat(root, 'commit_data', commitData, 18);
+  justifyFormat(root, 'age_data', ageData, 49);
+  justifyFormat(root, 'star_data', starData, 21);
+  justifyFormat(root, 'repo_data', repoData, 4);
   justifyFormat(root, 'contrib_data', contribData);
   justifyFormat(root, 'follower_data', followerData, 10);
-  justifyFormat(root, 'loc_data', locData[2], 9);
+  justifyFormat(root, 'loc_data', locData[2], 18);
   justifyFormat(root, 'loc_add', locData[0]);
   justifyFormat(root, 'loc_del', locData[1], 7);
 
@@ -300,7 +301,7 @@ function justifyFormat(root: Element, elementId: string, newText: string | numbe
   let dotString: string;
 
   if(justLen <= 2) {
-    const dotMap: Record<number, string> = { 0: '', 1: ' ', 2: '. ' };
+    const dotMap: Record<number, string> = { 0: '', 1: ' ', 2: ' . ' };
     dotString = dotMap[justLen];
   } 
   else {
@@ -435,7 +436,7 @@ const main = async (): Promise<void> => {
   const [userData, userTime] = await perfCounter(fetchUserData, USER_NAME!);
   OWNER_ID = userData.id;
   formatter('account data', userTime);
-  const [ageData, ageTime] = await perfCounter(dailyReadme, new Date(2002, 6, 5));
+  const [ageData, ageTime] = await perfCounter(dailyReadme, new Date(2003, 9, 30));
   formatter('age calculation', ageTime);
 
   // one paginated repository list feeds the LOC pass and every repo/star/contributor count
