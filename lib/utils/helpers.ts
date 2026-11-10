@@ -1,4 +1,4 @@
-import { addMonths, differenceInCalendarDays, differenceInCalendarMonths } from 'date-fns';
+import { addMonths, differenceInCalendarDays, startOfDay } from 'date-fns';
 
 /**
  * Returns the length of time since I was born
@@ -36,41 +36,27 @@ export function formatPlural(unit: number): string {
  * addMonths clamps overflowing days (e.g. Feb 29 -> Feb 28) and preserves the
  * base date's time-of-day, matching dateutil's calendar behavior.
  * 
+ * Days are counted as calendar days (differenceInCalendarDays), not elapsed
+ * 24-hour periods, so the current time of day never shifts the day count.
+ * 
  * @param to - The date to compare to
  * @param from - The date to compare from
  * @returns The difference between the two dates in years, months, and days
  */
 export function relativedelta(to: Date, from: Date): { years: number; months: number; days: number } {
-    const timeOfDay = (d: Date): number =>
-        d.getHours() * 3600000 + d.getMinutes() * 60000 + d.getSeconds() * 1000 + d.getMilliseconds();
-    // Get year / month delta between the two
-    let months = differenceInCalendarMonths(to, from);
+    const base = startOfDay(from);
+    let months = (to.getFullYear() - from.getFullYear()) * 12 + (to.getMonth() - from.getMonth());
 
-    let anchor = addMonths(from, months);
-    if(to < from) {
-        // target before the base date: grow the month count; the anchor may pass
-        // the target and the resulting negative timedelta flows into the day count
-        while(to > anchor) {
-            months += 1;
-            anchor = addMonths(from, months);
-        }
-    } 
-    else {
-        // target after (or equal to) the base date: shrink until the anchor is behind it
-        while(anchor > to) {
-            months -= 1;
-            anchor = addMonths(from, months);
-        }
-    }
-    // wall-clock timedelta between the months-adjusted anchor and the target,
-    // cascaded to whole days (which truncates the
-    // days and keeps the remaining hours/minutes/seconds out of .days)
-    const wallDelta = differenceInCalendarDays(to, anchor) * 86400000
-        + timeOfDay(to) - timeOfDay(anchor);
-    const days = Math.trunc(wallDelta / 86400000);
-    // Split into years + leftover months
-    const years = Math.trunc(months / 12);
-    return { years, months: months - years * 12, days };
+    if(to < addMonths(base, months)) months -= 1;
+
+    const anniversary = addMonths(base, months);
+    const days = differenceInCalendarDays(startOfDay(to), anniversary);
+
+    return {
+        years: Math.floor(months / 12),
+        months: ((months % 12) + 12) % 12,
+        days
+    };
 }
 
 /**

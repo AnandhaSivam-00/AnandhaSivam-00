@@ -8,7 +8,7 @@ import type { ContributorActivity, GitHubUser, RepoListItem } from '../lib/types
 
 /** Counts how many times each GitHub REST API endpoint is called */
 export const REST_CALL_COUNT: Record<string, number> = {
-  'user_getter': 0, 'repos_list': 0, 'loc_stats': 0,
+  'user_getter': 0, 'repos_list': 0, 'commit_count': 0, 'loc_stats': 0,
 };
 
 /**
@@ -57,6 +57,27 @@ function parseNextLink(link: string | null): string | null {
 }
 
 /**
+ * Extracts the total page count from the Link header's rel="last" entry
+ * 
+ * @param link - The raw Link header value (or null when absent)
+ * @returns The last page number (one commit per page), or null when absent
+ */
+function parseLastLink(link: string | null): number | null {
+  if(link === null) {
+    return null;
+  }
+
+  for(const part of link.split(',')) {
+    const match = part.match(/[?&]page=(\d+)>;\s*rel="last"/);
+    if(match) {
+      return parseInt(match[1], 10);
+    }
+  }
+
+  return null;
+}
+
+/**
  * Fetches every page of a paginated REST endpoint by following the Link header
  * 
  * @param functId - The endpoint key counted against REST_CALL_COUNT
@@ -93,6 +114,24 @@ export async function fetchUserData(username: string): Promise<GitHubUser> {
  */
 export async function fetchAllRepos(): Promise<RepoListItem[]> {
   return await paginate<RepoListItem>('repos_list', '/user/repos?affiliation=owner,collaborator,organization_member');
+}
+
+/**
+ * Fetches the total commit count of a repository's default branch
+ * Uses per_page=1 so the Link header's rel="last" page number equals the commit count
+ * 
+ * @param owner - The repository owner
+ * @param repo - The repository name
+ * @returns The commit count, or 0 for empty repositories
+ */
+export async function fetchCommitCount(owner: string, repo: string): Promise<number> {
+  const request = await restRequest('commit_count', `${API_BASE}/repos/${owner}/${repo}/commits?per_page=1`, [200, 409]);
+
+  if(request.status === 409) {
+    return 0; // empty repository
+  }
+  
+  return parseLastLink(request.headers.get('link')) ?? 1; // no Link header means a single page of one commit
 }
 
 /**
