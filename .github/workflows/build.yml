@@ -23,7 +23,6 @@ jobs:
         uses: pnpm/action-setup@73e46992e05b19abd31f2f3c20e0e7370d762115   # v2.1.1
         with:
           version: 12.11.2
-          runtime: node@24
           cache: true
           run_install: false
           cache_dependency_path: pnpm-lock.yaml
